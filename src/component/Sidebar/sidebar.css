@@ -1,0 +1,118 @@
+.sidebar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    padding: 15px 0;
+    background: #f2f3f7;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.13);
+    transition: all .7s;
+    z-index: 2;
+    overflow: scroll;
+}
+.is-open.sidebar {
+    transition: all .7s;
+    left: 0;
+
+}
+.toggle_btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    display: none;
+    opacity: 0;
+    transition: all .7s;
+    z-index: 3;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        transition: all .7s;
+        left: 0;
+    }
+    .is-open.sidebar {
+        transition: all .7s;
+        left: -300px;
+    }
+    .toggle_btn {
+        display: block;
+        opacity: 1;
+    }
+}
+.user_image_box {
+    width: 150px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user_image {
+    width: 100%;
+}
+.user_name h1 {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: .5em;
+}
+.user_name h1 a {
+    text-align: center;
+    color: #000;
+}
+.user_details span {
+    font-size: 12px;
+    font-family: -apple-system, Ubuntu !important;
+}
+.nav-item {
+    padding: 0 10px !important;
+}
+.sidebar_content .nav-item, .nav-item {
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sidebar_content .nav-item .nav-link, .sidebar_footer .nav-item .nav-link, .nav-item .nav-link{
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    position: relative;
+    padding: 10px 0 !important;
+    font-family: "Quicksand", Arial, sans-serif;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: inline-block;
+}
+.sidebar_content .nav-item .nav-link.active, .sidebar_footer .nav-item .nav-link.active, .nav-item .nav-link.active {
+    color: #2c98f0 !important;
+    background: none !important;
+}
+.sidebar_content .nav-item .nav-link:after, .sidebar_footer .nav-item .nav-link:after, .nav-item .nav-link:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: 7px;
+    left: 0;
+    right: 0;
+    background-color: #2c98f0;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.sidebar_content .nav-item .active.nav-link:after, .sidebar_content .nav-item:hover .nav-link:after, .sidebar_footer .nav-item .active.nav-link:after, .sidebar_footer .nav-item:hover .nav-link:after, .nav-item:hover .nav-link:after, .nav-item .active.nav-link:after {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+}
