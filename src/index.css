@@ -23,10 +23,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 30px 0;
 }
 
-/*svg {*/
-/*  color: #fff;*/
-/*}*/
-
 ul, li {
   padding: 0;
   margin: 0;
@@ -40,9 +36,9 @@ a, a:hover {
 section {
   padding: 30px 0;
 }
-section:first-child {
-  padding-top: 0;
-}
+/*section:first-child {*/
+/*  padding-top: 0;*/
+/*}*/
 p {
   margin-bottom: 15px;
 }
@@ -71,10 +67,11 @@ p {
 }
 .port {
   padding-top: 35px;
+  padding-bottom: 35px;
 }
-.port .portfolio_item, .port .blog_item {
-  display: none;
-}
+/*.port .portfolio_item, .port .blog_item {*/
+/*  display: none;*/
+/*}*/
 .social_menu_ul li {
   display: inline-block;
   /*padding: 15px 0;*/
@@ -87,3 +84,221 @@ p {
   content: "";
   border: none !important;
 }
+
+
+
+/*DEMO*/
+
+/* The laptop with borders */
+.laptop {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    /*left: 50%;*/
+    /*position: absolute;*/
+    width: 1366px;
+    height: 800px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: black;
+    border-width: 24px 24px 80px;
+    background-color: black;
+    overflow: inherit;
+    display: none;
+}
+
+
+/*!* The screen (or content) of the device *!*/
+/*.laptop .content {*/
+/*    width: 1366px;*/
+/*    height: 800px;*/
+/*    overflow: hidden;*/
+/*    border: none;*/
+/*}*/
+
+
+/* The device with borders */
+.smartphone {
+    position: relative;
+    /*width: 360px;*/
+    /*height: 640px;*/
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+    margin: auto;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+/*.smartphone .content {*/
+/*    width: 360px;*/
+/*    height: 640px;*/
+/*    background: white;*/
+/*}*/
+
+
+.tablet {
+    position: relative;
+    width: 100%;
+    /*height: 1024px;*/
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+    display: none;
+}
+
+/* The horizontal line on the top of the device */
+.tablet:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.tablet:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+/*.tablet .content {*/
+/*    width: 768px;*/
+/*    height: 1024px;*/
+/*    background: white;*/
+/*    margin: -1px;*/
+/*}*/
+
+@media (min-width: 768px) {
+    .laptop {
+        -webkit-transform: scale(.50512); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+        transform: scale(.50512); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+        display: block;
+    }
+    .tablet {
+        display: block;
+    }
+}
+@media (min-width: 992px) {
+    .laptop {
+        -webkit-transform: scale(.68082); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+        transform: scale(.68082); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+        display: block;
+    }
+}
+@media (min-width: 1200px) {
+    .laptop {
+        -webkit-transform: scale(.81259); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+        transform: scale(.81259); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+        display: block;
+    }
+}
+
+.pt-56 {
+    padding-top: 56%;
+}
+
+.pt-175 {
+    padding-top: 150%;
+}
+
+
+
+
+
+
+
+
+
+
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: inherit;
+}
+
+.scrolltotop {
+    opacity: 0.3;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    transition: all 0.5s;
+    width: 40px;
+    height: 40px;
+    background: #2c98f0;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 0 0 5px #f2f3f7;
+    line-height: 40px;
+    float: left;
+    color: #fff;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-in-out 0.3s both;
+    cursor: pointer;
+}
+.scrolltotop:hover {
+    opacity: 1;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slide_content .text {
+    background: rgba(0,0,0,.5);
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+
+
+
+
+

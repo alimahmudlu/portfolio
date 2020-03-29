@@ -3,10 +3,11 @@ import React from "react";
 
 export default function Home() {
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
+        fade: true,
         speed: 500,
-        autoplay: 500,
+        autoplay: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
         vertical: false
@@ -20,8 +21,8 @@ export default function Home() {
                     </div>
                     <div className="slide_content">
                         <div>
-                            <h1 className="text header_text white_text">Salam</h1>
-                            <h2 className="text content_text white_text">Necesen?</h2>
+                            <h1 className="text header_text white_text" data-aos='fade-up'>Salam</h1>
+                            <h2 className="text content_text white_text" data-aos='fade-up'>Necesen?</h2>
                         </div>
                     </div>
                 </div>
@@ -31,8 +32,8 @@ export default function Home() {
                     </div>
                     <div className="slide_content">
                         <div>
-                            <h1 className="text header_text white_text">Salam</h1>
-                            <h2 className="text content_text white_text">Necesen?</h2>
+                            <h1 className="text header_text white_text" data-aos='fade-up'>Salam</h1>
+                            <h2 className="text content_text white_text" data-aos='fade-up'>Necesen?</h2>
                         </div>
                     </div>
                 </div>
@@ -42,8 +43,8 @@ export default function Home() {
                     </div>
                     <div className="slide_content">
                         <div>
-                            <h1 className="text header_text white_text">Salam</h1>
-                            <h2 className="text content_text white_text">Necesen?</h2>
+                            <h1 className="text header_text white_text" data-aos='fade-up'>Salam</h1>
+                            <h2 className="text content_text white_text" data-aos='fade-up'>Necesen?</h2>
                         </div>
                     </div>
                 </div>

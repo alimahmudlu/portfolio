@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import "video-react/dist/video-react.css";
+import "aos/dist/aos.css"
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

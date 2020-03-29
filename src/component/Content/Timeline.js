@@ -4,12 +4,12 @@ import React from "react";
 
 export default function Timeline() {
     return (
-        <section id="timeline" className="timeline_section">
+        <section id="timeline" className="timeline_section"  data-aos='fade-up'>
             <div className="pb-4">
                 <span className="menu_header">Timeline</span>
                 <h1 className="section_header">highlights</h1>
                 <div className="timeline">
-                    <div className="timeline_item color_1">
+                    <div className="timeline_item color_1" data-aos='fade-up'>
                         <div className="timeline_item_icon bg_c">
                             <FontAwesomeIcon icon={faAlignCenter} />
                         </div>
@@ -22,7 +22,7 @@ export default function Timeline() {
                             </div>
                         </div>
                     </div>
-                    <div className="timeline_item color_2">
+                    <div className="timeline_item color_2" data-aos='fade-up'>
                         <div className="timeline_item_icon">
                             <FontAwesomeIcon icon={faAlignCenter} />
                         </div>
@@ -35,7 +35,7 @@ export default function Timeline() {
                             </div>
                         </div>
                     </div>
-                    <div className="timeline_item color_2">
+                    <div className="timeline_item color_2" data-aos='fade-up'>
                         <div className="timeline_item_icon">
                             <FontAwesomeIcon icon={faAlignCenter} />
                         </div>

@@ -2,14 +2,15 @@ import React from 'react';
 import "./content.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAlignCenter} from "@fortawesome/free-solid-svg-icons";
-import { Switch, Route, Link} from "react-router-dom";
-import port_image from "../../assets/images/img1.jpg"
+import { Switch, Route} from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Timeline from "./Timeline";
 import Portfolio from "./Portfolio";
 import Blog from "./Blog";
 import Contact from "./Contact";
+import Subscribe from "./Subscribe";
+import Services from "./Services";
 
 function Content(props) {
     return (
@@ -20,12 +21,14 @@ function Content(props) {
             <div className="">
                 <Switch>
                     <Route exact path="/">
-                        <Home/>
+                        {/*<Home/>*/}
                         <div className="container-fluid">
                             <About/>
+                            <Services/>
                             <Timeline/>
                             <Portfolio/>
                             <Blog/>
+                            <Subscribe/>
                             <Contact/>
                         </div>
                     </Route>

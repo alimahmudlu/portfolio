@@ -1,37 +1,71 @@
-import React from "react";
+import React, {useState} from "react";
 import {Route, Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAlignCenter} from "@fortawesome/free-solid-svg-icons";
 import {faFacebookF, faLinkedinIn, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import port_image from "../../assets/images/img1.jpg";
+import blogItems from "./Blog_List";
 
-export default function Blog_frontend() {
+export default function Blog_frontend(props) {
+    const [slice, setSlice] = useState(3);
+    function loadMore() {
+        setSlice(slice + 3);
+
+    }
     return (
         <>
             <Route exact path="/pages/blog/photos/">
                 <div className="pb-5">
                     <div className="blog" id="blog_photos">
-                        <div className="blog_item color_1 category-photo">
-                            <div className="blog_item_icon bg_c">
-                                <Link to="/pages/blog/photos/"><FontAwesomeIcon icon={faAlignCenter} /></Link>
-                            </div>
-                            <div className="blog_item_desc">
-                                <div className="blog_item_head">
-                                    <h1>Blog item 1 <span>11.12.2019</span></h1>
-                                </div>
-                                <div className="blog_item_content">
-                                    <div className="">
-                                        <p>I recently have joined the Juniper Networs as a Software Developer-Intern in the DevOps team. My major part of the work has been into the field of creating sustainable and flexible CI/CD (Continuous Integration & Continuous Development) pipelines which enables developers at Juniper to do rapid development. I am also exploring the role of container technology like Docker and container-orchrastation technologies like K8s, Swarm to create industry standard production environments.</p>
+                        {blogItems.filter(function(item) { return item.blogCategory === "photos"; }).length === 0 ?
+                            <>
+                                <div className="blog_item color_1 category-photos">
+                                    <div className="blog_item_icon bg_c">
+                                        <Link to="/pages/blog/"><FontAwesomeIcon icon={faAlignCenter} /></Link>
                                     </div>
-                                    <div className="">
-                                        <Link to="/pages/blog/photos/view/in" className="btn btn-custom d-flex align-items-center" type="submit">View</Link>
+                                    <div className="blog_item_desc">
+                                        <div className="blog_item_head">
+                                            <h1>There is no items here yet... <span></span></h1>
+                                        </div>
+                                        <div className="blog_item_content">
+                                            <div className="">
+                                                <p>Please come back later</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </>
+                            :
+                            <>
+                                {blogItems.filter(function(item) { return item.blogCategory === "photos"; }).slice(0, slice).map((item, index) => {
+                                    return (
+                                        <div className={["blog_item color_1 category-",item.blogCategory ].join("")}>
+                                            <div className="blog_item_icon bg_c">
+                                                <Link to={["/pages/blog/",item.blogCategory ].join("")}><FontAwesomeIcon icon={faAlignCenter} /></Link>
+                                            </div>
+                                            <div className="blog_item_desc">
+                                                <div className="blog_item_head">
+                                                    <h1>{item.blogName} <span>{item.blogPostDate}</span></h1>
+                                                </div>
+                                                <div className="blog_item_content">
+                                                    <div className="">
+                                                        <p>{item.blogContent}</p>
+                                                    </div>
+                                                    <div className="">
+                                                        <Link to={["/pages/blog/",item.blogCategory,"/view/in" ].join("")} className="btn btn-custom d-flex align-items-center" type="submit">View</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </>
+                        }
+                        {slice < blogItems.filter(function(item) { return item.blogCategory === "photos"; }).length &&
                         <div className="blog_item color_1 d-block">
-                            <a href="#" id="loadMore_blog_photos" className="viewall btn-custom btn_load_more align-items-center" type="submit">Load More</a>
+                            <a href="#" onClick={loadMore} id="loadMore_blog_all" className="viewall btn-custom btn_load_more align-items-center" type="button">Load More</a>
                         </div>
+                        }
                     </div>
                 </div>
             </Route>

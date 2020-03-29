@@ -5,6 +5,7 @@ import Pages from "../Pages/Pages";
 import Navbar from "../Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Page404 from "./Page404";
+import ScrollButton from "./Scroll-Button";
 
 function HomePage() {
     const [visible, setVisible] = useState(true);
@@ -13,10 +14,11 @@ function HomePage() {
     }
     return (
         <div>
-            <Router forceRefresh={true}>
+            <ScrollButton scrollStepInPx="20" delayInMs="16.66"/>
+            <Router forceRefresh={false}>
                 <Switch>
                     <Route exact path="/">
-                        <Sidebar visible={visible} setVisible={setVisible}/>
+                        <Sidebar toggle={toggle} visible={visible} setVisible={setVisible}/>
                         <Content toggle={toggle} visible={visible} setVisible={setVisible}/>
                     </Route>
                     <Route path="/pages">

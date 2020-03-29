@@ -2,11 +2,9 @@ import React, {useState} from 'react';
 import userimage from "./../../userimage.jpg";
 import "./sidebar.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faLinkedinIn, faYoutube} from '@fortawesome/free-brands-svg-icons'
-import { faAlignCenter } from "@fortawesome/free-solid-svg-icons";
+import {faFacebookF, faLinkedinIn, faMailchimp, faYoutube} from '@fortawesome/free-brands-svg-icons'
 
 function Sidebar(props) {
-    console.log(props.visible);
     return (
         <div className={props.visible ? "sidebar is-open" : "sidebar"}>
             <div className="container-fluid">
@@ -27,11 +25,14 @@ function Sidebar(props) {
                 </div>
                 <div className="sidebar_content ">
                     <ul className="nav-pills text-center">
-                        <li className="nav-item">
-                            <a className="nav-link" href="#introduction">Introduction</a>
-                        </li>
+                        {/*<li className="nav-item">*/}
+                        {/*    <a className="nav-link" href="#introduction">Introduction</a>*/}
+                        {/*</li>*/}
                         <li className="nav-item">
                             <a className="nav-link" href="#about">About</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#skills">Skills</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#timeline">Timeline</a>
