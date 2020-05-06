@@ -91,6 +91,7 @@
     padding: 15px;
     text-align: center;
     border-bottom: 2px solid;
+    height: 100%;
 }
 .service_box_icon {
     position: absolute;

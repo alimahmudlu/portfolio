@@ -15,7 +15,7 @@ export default function Blog_frontend(props) {
     return (
         <>
             <Route exact path="/pages/blog/photos/">
-                <div className="pb-5">
+                <section className="pb-5">
                     <div className="blog" id="blog_photos">
                         {blogItems.filter(function(item) { return item.blogCategory === "photos"; }).length === 0 ?
                             <>
@@ -67,7 +67,7 @@ export default function Blog_frontend(props) {
                         </div>
                         }
                     </div>
-                </div>
+                </section>
             </Route>
             <Route path="/pages/blog/photos/view/in/">
                 <Blog_photos_in/>

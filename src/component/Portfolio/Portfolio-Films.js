@@ -23,7 +23,7 @@ export default function Portfolio_films() {
     }
     return (
         <>
-            <Route exact path="/pages/portfolio/films/">
+            <Route exact path="/pages/portfolio/film/">
                 <section className="pb-5">
                     <div id="portfolio_all" className="row">
                         {portfolioItems.filter(function (item) { return item.portfolioCategory === "film"; }).length === 0 ?
@@ -79,7 +79,7 @@ export default function Portfolio_films() {
                     }
                 </section>
             </Route>
-            <Route path="/pages/portfolio/films/view/in">
+            <Route path="/pages/portfolio/film/view/in">
                 <Portfolio_films_in/>
             </Route>
         </>

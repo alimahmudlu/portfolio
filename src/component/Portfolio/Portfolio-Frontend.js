@@ -130,21 +130,21 @@ function Portfolio_frontend_in_demo() {
         <section>
             <div className="laptop box pt-56">
                 <div className="content box_resize">
-                    <iframe className="w-100 h-100" src="/pages/portfolio/frontend" width="" height="" frameBorder="0" allowFullScreen=""></iframe>
+                    <iframe className="w-100 h-100" src="/pages/portfolio/" width="" height="" frameBorder="0" allowFullScreen=""></iframe>
                 </div>
             </div>
             <div className="row">
                 <div className="col-md-7">
                     <div className="tablet box pt-175">
                         <div className="content box_resize">
-                            <iframe className="w-100 h-100" src="/pages/portfolio/frontend" width="" height="" frameBorder="0" allowFullScreen=""></iframe>
+                            <iframe className="w-100 h-100" src="/pages/portfolio/" width="" height="" frameBorder="0" allowFullScreen=""></iframe>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-5">
                     <div className="smartphone pt-175">
                         <div className="content box_resize">
-                            <iframe className="w-100 h-100" src="/pages/portfolio/frontend" width="" height="" frameBorder="0" allowFullScreen=""></iframe>
+                            <iframe className="w-100 h-100" src="/pages/portfolio/" width="" height="" frameBorder="0" allowFullScreen=""></iframe>
                         </div>
                     </div>
                 </div>

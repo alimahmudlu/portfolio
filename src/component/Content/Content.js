@@ -11,10 +11,16 @@ import Blog from "./Blog";
 import Contact from "./Contact";
 import Subscribe from "./Subscribe";
 import Services from "./Services";
+import {Helmet} from "react-helmet/es/Helmet";
 
 function Content(props) {
     return (
         <div className={props.visible ? "content is-open" : "content"}>
+
+            <Helmet>
+                <title>Ali Mahmudlu</title>
+            </Helmet>
+
             <button className="toggle_btn" onClick={props.toggle}>
                 <FontAwesomeIcon icon={faAlignCenter} />
             </button>

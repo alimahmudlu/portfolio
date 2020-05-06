@@ -11,8 +11,9 @@ export default function Blog() {
     return (
         <>
             <Helmet>
-                <title>BLOG PAGE</title>
+                <title>BLOG PAGE | Ali Mahmudlu</title>
             </Helmet>
+
             <div className="port">
                 <div className="container">
                     <span className="menu_header">Blog</span>

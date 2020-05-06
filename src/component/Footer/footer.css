@@ -1,0 +1,10 @@
+.footer {
+    background-color: rgb(248, 249, 250);
+    /*background-color: #f2f3f7;*/
+}
+
+.footer_content {
+    color: rgba(0,0,0,.5);
+    padding: 22px 15px;
+    display: block;
+}

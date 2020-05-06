@@ -15,7 +15,7 @@ export default function Blog_films(props) {
     return (
         <>
             <Route exact path="/pages/blog/film/">
-                <div className="pb-5">
+                <section className="pb-5">
                     <div className="blog" id="blog_films">
                         {blogItems.filter(function(item) { return item.blogCategory === "film"; }).length === 0 ?
                             <>
@@ -67,9 +67,9 @@ export default function Blog_films(props) {
                         </div>
                         }
                     </div>
-                </div>
+                </section>
             </Route>
-            <Route path="/pages/blog/films/view/in">
+            <Route path="/pages/blog/film/view/in">
                 <Blog_films_in/>
             </Route>
         </>

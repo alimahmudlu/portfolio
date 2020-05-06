@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Page404 from "./Page404";
 import ScrollButton from "./Scroll-Button";
+import Footer from "../Footer/Footer";
 
 function HomePage() {
     const [visible, setVisible] = useState(true);
@@ -24,6 +25,7 @@ function HomePage() {
                     <Route path="/pages">
                         <Navbar/>
                         <Pages/>
+                        <Footer/>
                     </Route>
                     <Route path="*">
                         <Page404/>

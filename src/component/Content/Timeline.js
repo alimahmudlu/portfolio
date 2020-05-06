@@ -1,6 +1,65 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAlignCenter} from "@fortawesome/free-solid-svg-icons";
+import {faAlignCenter, faCode, faCogs, faUserCog, faVideo} from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+
+const timelineItems = [
+    {
+        timelineId: 1,
+        timelineName: "Edumedia-Azerbaijan",
+        timelineContent: "Frontend Developer",
+        timelineStartDate: "10.2019",
+        timelineEndDate: "present",
+        timelineIcon: faCode
+    },
+    {
+        timelineId: 2,
+        timelineName: "Embawood",
+        timelineContent: "Praktika",
+        timelineStartDate: "02.2018",
+        timelineEndDate: "06.2018",
+        timelineIcon: faUserCog
+    },
+    {
+        timelineId: 3,
+        timelineName: "D-Tech",
+        timelineContent: "Frontend Developer",
+        timelineStartDate: "01.2018",
+        timelineEndDate: "06.2018",
+        timelineIcon: faCode
+    },
+    {
+        timelineId: 4,
+        timelineName: "Satıcı/Təmirci",
+        timelineContent: "2Əl",
+        timelineStartDate: "09.2017",
+        timelineEndDate: "01.2018",
+        timelineIcon: faCogs
+    },
+    {
+        timelineId: 5,
+        timelineName: "DevCenter",
+        timelineContent: "Frontend Developer",
+        timelineStartDate: "10.2016",
+        timelineEndDate: "05.2017",
+        timelineIcon: faCode
+    },
+    {
+        timelineId: 6,
+        timelineName: "Freelance",
+        timelineContent: "Frontend Developer",
+        timelineStartDate: "09.2014",
+        timelineEndDate: "10.2016",
+        timelineIcon: faCode
+    },
+    {
+        timelineId: 7,
+        timelineName: "Freelance",
+        timelineContent: "Videoqraf",
+        timelineStartDate: "2015",
+        timelineEndDate: "06.2018",
+        timelineIcon: faVideo
+    }
+]
 
 export default function Timeline() {
     return (
@@ -9,45 +68,24 @@ export default function Timeline() {
                 <span className="menu_header">Timeline</span>
                 <h1 className="section_header">highlights</h1>
                 <div className="timeline">
-                    <div className="timeline_item color_1" data-aos='fade-up'>
-                        <div className="timeline_item_icon bg_c">
-                            <FontAwesomeIcon icon={faAlignCenter} />
-                        </div>
-                        <div className="timeline_item_desc">
-                            <div className="timeline_item_head">
-                                <h1>Internship at Juniper <span>2019-present</span></h1>
+                    {timelineItems.map((item, index) => {
+                        return (
+                            <div className="timeline_item color_1" data-aos='fade-up'>
+                                <div className="timeline_item_icon bg_c">
+                                    <FontAwesomeIcon icon={item.timelineIcon} />
+                                </div>
+                                <div className="timeline_item_desc">
+                                    <div className="timeline_item_head">
+                                        <h1>{item.timelineName} <span>{item.timelineStartDate}-{item.timelineEndDate}</span></h1>
+                                    </div>
+                                    <div className="timeline_item_content">
+                                        <p>{item.timelineContent}</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="timeline_item_content">
-                                <p>I recently have joined the Juniper Networs as a Software Developer-Intern in the DevOps team. My major part of the work has been into the field of creating sustainable and flexible CI/CD (Continuous Integration & Continuous Development) pipelines which enables developers at Juniper to do rapid development. I am also exploring the role of container technology like Docker and container-orchrastation technologies like K8s, Swarm to create industry standard production environments.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="timeline_item color_2" data-aos='fade-up'>
-                        <div className="timeline_item_icon">
-                            <FontAwesomeIcon icon={faAlignCenter} />
-                        </div>
-                        <div className="timeline_item_desc">
-                            <div className="timeline_item_head">
-                                <h1>Internship at Juniper <span>2019-present</span></h1>
-                            </div>
-                            <div className="timeline_item_content">
-                                <p>I recently have joined the Juniper Networs as a Software Developer-Intern in the DevOps team. My major part of the work has been into the field of creating sustainable and flexible CI/CD (Continuous Integration & Continuous Development) pipelines which enables developers at Juniper to do rapid development. I am also exploring the role of container technology like Docker and container-orchrastation technologies like K8s, Swarm to create industry standard production environments.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="timeline_item color_2" data-aos='fade-up'>
-                        <div className="timeline_item_icon">
-                            <FontAwesomeIcon icon={faAlignCenter} />
-                        </div>
-                        <div className="timeline_item_desc">
-                            <div className="timeline_item_head">
-                                <h1>Internship at Juniper <span>2019-present</span></h1>
-                            </div>
-                            <div className="timeline_item_content">
-                                <p>I recently have joined the Juniper Networs as a Software Developer-Intern in the DevOps team. My major part of the work has been into the field of creating sustainable and flexible CI/CD (Continuous Integration & Continuous Development) pipelines which enables developers at Juniper to do rapid development. I am also exploring the role of container technology like Docker and container-orchrastation technologies like K8s, Swarm to create industry standard production environments.</p>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    })}
+
                 </div>
             </div>
         </section>
