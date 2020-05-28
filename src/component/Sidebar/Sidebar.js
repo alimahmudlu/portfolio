@@ -18,7 +18,7 @@ function Sidebar(props) {
                         </div>
                     </div>
                     <div className="user_name">
-                        <h1><Link to="#">Əli Mahmudlu</a></h1>
+                        <h1><Link to="#">Əli Mahmudlu</Link></h1>
                     </div>
                     <div className="user_details">
                         <span>alimahmudlu@gmail.com</span>
