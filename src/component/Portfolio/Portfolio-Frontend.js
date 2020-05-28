@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import port_image from "../../assets/images/img1.jpg";
-import {Link, NavLink, Route} from "react-router-dom";
+import {Link, Route} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebookF, faLinkedinIn, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import portfolioItems from "./Portfolio_List";

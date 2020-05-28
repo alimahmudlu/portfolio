@@ -1,42 +1,3 @@
-// import React from "react";
-// import {faAlignCenter} from "@fortawesome/free-solid-svg-icons";
-// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-//
-// class ScrollButton extends React.Component {
-//     constructor() {
-//         super();
-//
-//         this.state = {
-//             intervalId: 0
-//         };
-//     }
-//
-//     scrollStep() {
-//         if (window.pageYOffset === 0) {
-//             clearInterval(this.state.intervalId);
-//         }
-//         window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
-//     }
-//
-//     scrollToTop() {
-//         let intervalId = setInterval(this.scrollStep.bind(this), "0");
-//         this.setState({ intervalId: intervalId });
-//     }
-//
-//
-//
-//     render () {
-//         return <button title='Back to top' className='scrolltotop' onClick={ () => { this.scrollToTop(); }}>
-//             <span className=''>
-//                 <FontAwesomeIcon icon={faAlignCenter} />
-//             </span>
-//         </button>;
-//     }
-// }
-//
-// export default ScrollButton
-//
-
 import React, { Component } from "react";
 import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -51,7 +12,7 @@ class ScrollButton extends Component {
 
     componentDidMount() {
         var scrollComponent = this;
-        document.addEventListener("scroll", function(e) {
+        document.addEventListener("scroll", function() {
             scrollComponent.toggleVisibility();
         });
     }

@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAlignCenter, faCode, faCogs, faUserCog, faVideo} from "@fortawesome/free-solid-svg-icons";
+import {faCode, faCogs, faUserCog, faVideo} from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const timelineItems = [

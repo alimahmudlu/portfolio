@@ -6,7 +6,7 @@ import AOS from 'aos';
 import blogItems from "../Blog/Blog_List";
 
 export default function Blog() {
-    const [slice, setSlice] = useState(3);
+    const [slice] = useState(3);
     AOS.init()
     return (
         <section id="blog" className="blog_section"  data-aos='fade-up'>

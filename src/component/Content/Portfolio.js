@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import React, {useState, useEffect} from 'react';
 import Isotope from "isotope-layout"
 import portfolioItems from "../Portfolio/Portfolio_List";
-import {Helmet} from "react-helmet/es/Helmet";
 
 export default function Portfolio() {
     const [isotope, setIsotope] = useState(null);

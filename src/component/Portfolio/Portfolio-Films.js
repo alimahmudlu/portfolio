@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from "react";
+import React, {useState} from "react";
 import port_image from "../../assets/images/img1.jpg";
 import {Link, Route} from "react-router-dom";
 import {
@@ -45,9 +45,7 @@ export default function Portfolio_films() {
                             </>
                             :
                             <>
-                                {portfolioItems.filter(function (item) {
-                                    return item.portfolioCategory === "film";
-                                }).slice(0, slice).map((item, index) => {
+                                {portfolioItems.filter(function (item) { return item.portfolioCategory === "film"; }).slice(0, slice).map((item, index) => {
                                     return (
                                         <div
                                             className={["col-md-4 portfolio_item category-", item.portfolioCategory].join("")}>

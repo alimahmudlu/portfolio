@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import userimage from "./../../userimage.jpg";
 import "./sidebar.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faFacebookF, faLinkedinIn, faMailchimp, faYoutube} from '@fortawesome/free-brands-svg-icons'
+import {faFacebookF, faLinkedinIn, faYoutube} from '@fortawesome/free-brands-svg-icons'
+import {Link} from "react-router-dom";
 
 function Sidebar(props) {
     return (
@@ -12,12 +13,12 @@ function Sidebar(props) {
                     <div className="user_image_box">
                         <div className="box pt-100">
                             <div className="box_resize">
-                                <img src={userimage} className="user_image" />
+                                <img src={userimage} className="user_image" alt="user pic" />
                             </div>
                         </div>
                     </div>
                     <div className="user_name">
-                        <h1><a href="salam">Əli Mahmudlu</a></h1>
+                        <h1><Link to="#">Əli Mahmudlu</a></h1>
                     </div>
                     <div className="user_details">
                         <span>alimahmudlu@gmail.com</span>
@@ -29,22 +30,22 @@ function Sidebar(props) {
                         {/*    <a className="nav-link" href="#introduction">Introduction</a>*/}
                         {/*</li>*/}
                         <li className="nav-item">
-                            <a className="nav-link" href="#about">About</a>
+                            <Link className="nav-link" to="#about">About</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#skills">Skills</a>
+                            <Link className="nav-link" to="#skills">Skills</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#timeline">Timeline</a>
+                            <Link className="nav-link" to="#timeline">Timeline</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#portfolio">Portfolio</a>
+                            <Link className="nav-link" to="#portfolio">Portfolio</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#blog">Blog</a>
+                            <Link className="nav-link" to="#blog">Blog</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#contact">Contact</a>
+                            <Link className="nav-link" to="#contact">Contact</Link>
                         </li>
                     </ul>
                     <ul className="social-menu text-center">

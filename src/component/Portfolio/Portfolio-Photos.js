@@ -6,7 +6,6 @@ import {Route, Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebookF, faLinkedinIn, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import portfolioItems from "./Portfolio_List";
-import blogItems from "../Blog/Blog_List";
 
 export default function Portfolio_photos() {
     const [slice, setSlice] = useState(3);
@@ -140,8 +139,9 @@ function Portfolio_photos_in() {
 export const photos = [
     {
         src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-        width: 4,
-        height: 3
+        title: "salam",
+        width: 800,
+        height: 599
     },
     {
         src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",

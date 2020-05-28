@@ -1,12 +1,9 @@
 import React from 'react';
-import port_image from "../../assets/images/img1.jpg";
-import { Switch, Route, NavLink, Link} from "react-router-dom";
-import $ from "jquery";
+import {Route, NavLink} from "react-router-dom";
 import Portfolio_all from "./Portfolio-All";
 import Portfolio_photos from "./Portfolio-Photos";
 import Portfolio_frontend from "./Portfolio-Frontend";
 import Portfolio_films from "./Portfolio-Films";
-import Page404 from "../HomePage/Page404";
 import {Helmet} from "react-helmet/es/Helmet";
 
 export default function Portfolio() {

@@ -1,6 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faVideo, faCode, faFilm, faDizzy } from "@fortawesome/free-solid-svg-icons";
-import React, {useEffect} from "react";
+import React, from "react";
 
 const skillsItems = [
     {

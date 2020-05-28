@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import port_image from "../../assets/images/img1.jpg";
-import {Link, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 import portfolioItems from "./Portfolio_List";
 
 export default function Portfolio_all() {
@@ -17,7 +17,7 @@ export default function Portfolio_all() {
                         <div className="col-md-4 portfolio_item category-">
                             <div className="box pt-75">
                                 <div className="box_resize">
-                                    <img src={port_image} className="img_image"/>
+                                    <img src={port_image} className="img_image" alt="port img"/>
                                     <div className="portfolio_item_content">
                                         <div className="flex-group">
                                             <h2>There is no items here yet...</h2>
@@ -31,12 +31,12 @@ export default function Portfolio_all() {
                     </>
                     :
                     <>
-                        {portfolioItems.slice(0, slice).map((item, index) => {
+                        {portfolioItems.slice(0, slice).map((item) => {
                             return (
                                 <div className={["col-md-4 portfolio_item category-", item.portfolioCategory].join("")}>
                                     <div className="box pt-75">
                                         <div className="box_resize">
-                                            <img src={port_image} className="img_image"/>
+                                            <img src={port_image} className="img_image" alt="port img"/>
                                             <div className="portfolio_item_content">
                                                 <div className="flex-group">
                                                     <h2>{item.portfolioName}</h2>
