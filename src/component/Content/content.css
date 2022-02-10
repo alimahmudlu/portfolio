@@ -386,11 +386,11 @@
 .mb-md-7 {
     margin-bottom: 5rem !important
 }
-@media (min-width:992px) {
-    .mb-md-7 {
-        margin-bottom: 0 !important
-    }
-}
+/*@media (min-width:992px) {*/
+/*    .mb-md-7 {*/
+/*        margin-bottom: 0 !important*/
+/*    }*/
+/*}*/
 
 
 .category-social-media-and-websites {

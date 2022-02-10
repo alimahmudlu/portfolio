@@ -8,7 +8,7 @@ const timelineItems = [
         timelineName: "Edumedia-Azerbaijan",
         timelineContent: "Frontend Developer",
         timelineStartDate: "10.2019",
-        timelineEndDate: "present",
+        timelineEndDate: "indiyədək",
         timelineIcon: faCode
     },
     {
@@ -29,7 +29,7 @@ const timelineItems = [
     },
     {
         timelineId: 4,
-        timelineName: "Satıcı/Təmirci",
+        timelineName: "Satıcı/Təmirci/İnvestor",
         timelineContent: "2Əl",
         timelineStartDate: "09.2017",
         timelineEndDate: "01.2018",
@@ -48,7 +48,7 @@ const timelineItems = [
         timelineName: "Freelance",
         timelineContent: "Frontend Developer",
         timelineStartDate: "09.2014",
-        timelineEndDate: "10.2016",
+        timelineEndDate: "indiyədək",
         timelineIcon: faCode
     },
     {
@@ -56,7 +56,7 @@ const timelineItems = [
         timelineName: "Freelance",
         timelineContent: "Videoqraf",
         timelineStartDate: "2015",
-        timelineEndDate: "06.2018",
+        timelineEndDate: "indiyədək",
         timelineIcon: faVideo
     }
 ]

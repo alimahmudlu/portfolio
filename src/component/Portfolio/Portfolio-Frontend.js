@@ -42,7 +42,7 @@ export default function Portfolio_frontend() {
                                             className={["col-md-4 portfolio_item category-", item.portfolioCategory].join("")}>
                                             <div className="box pt-75">
                                                 <div className="box_resize">
-                                                    <img src={port_image} className="img_image"/>
+                                                    <img src={item.portfolioImage} className="img_image"/>
                                                     <div className="portfolio_item_content">
                                                         <div className="flex-group">
                                                             <h2>{item.portfolioName}</h2>

@@ -6,21 +6,35 @@ const skillsItems = [
     {
         skillId: 1,
         skillName: "Front-end Development",
-        skillContent: "I have experience building websites and chrome extentions using JavaScript,React,HTML,CSS",
+        skillContent: "HTML, CSS, JavaScript, React ilə 7 illik təcrübə və 100-lərlə iş",
         skillIcon: faCode,
         skillColor: "color_1"
     },
     {
         skillId: 2,
-        skillName: "Director of Photography",
-        skillContent: "I have experience building websites ",
+        skillName: "Mobile app Development",
+        skillContent: "HTML, CSS, JavaScript, React ilə 7 illik təcrübə və 100-lərlə iş",
+        skillIcon: faCode,
+        skillColor: "color_1"
+    },
+    {
+        skillId: 3,
+        skillName: "Kinematoqraf (DoP)",
+        skillContent: "10-larla qısa filmdə və reklamda kinematoqraf təcrübəsi",
         skillIcon: faVideo,
         skillColor: "color_2"
     },
     {
-        skillId: 2,
-        skillName: "Film Director",
-        skillContent: "I have experience building websites and chrome extentions",
+        skillId: 4,
+        skillName: "Rejissor",
+        skillContent: "4 qısa film və onlarla reklam rejissoru təcrübəsi",
+        skillIcon: faFilm,
+        skillColor: "color_3"
+    },
+    {
+        skillId: 4,
+        skillName: "Montajçı",
+        skillContent: "Onlarla qısa film və onlarla reklam montajçısı təcrübəsi",
         skillIcon: faFilm,
         skillColor: "color_3"
     }
@@ -32,8 +46,8 @@ export default function Services() {
             <section className="skills" id="skills"  data-aos='fade-up'>
             <div className="">
                 <div>
-                    <span className="menu_header">Skills</span>
-                    <h1 className="section_header">MY SKILLS</h1>
+                    <span className="menu_header">Bacarıqlarım</span>
+                    <h1 className="section_header">Nə bacarıram?</h1>
                     <div className="services">
                         <div className="row justify-content-center">
                             {skillsItems.length === 0 ?
@@ -61,7 +75,7 @@ export default function Services() {
                                 <>
                                     {skillsItems.map((item, index) => {
                                         return (
-                                            <div className="col-lg-4 col-md-6 mb-lg-0 mb-md-7 mb-7" data-aos='fade-up'>
+                                            <div className="col-lg-4 col-md-6 mb-lg-7 mb-md-7 mb-7" data-aos='fade-up'>
                                                 <div className={["service_box service_", item.skillColor].join("")}>
                                                     <div className="service_box_icon">
                                                         <FontAwesomeIcon icon={item.skillIcon}/>
