@@ -10,7 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.1.7",
     "@rooks/use-input": "^3.5.0",
     "aos": "^2.3.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "i": "^0.3.6",
     "isotope-layout": "^3.0.6",
